@@ -14,7 +14,7 @@ export function Navbar() {
   return (
     <div className="fixed top-0 hidden h-20 w-full items-center justify-evenly lg:flex">
       <div className="font-sans font-extrabold">MHF</div>
-      <div className="flex items-center justify-center gap-10">
+      <nav className="flex items-center justify-center gap-10">
         {menu.map((m) => {
           return (
             <div key={m.name} className="">
@@ -26,7 +26,7 @@ export function Navbar() {
             </div>
           )
         })}
-      </div>
+      </nav>
       <div className="flex items-center justify-center gap-10">
         <div>
           <SelectBox
