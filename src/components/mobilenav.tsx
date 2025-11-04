@@ -18,7 +18,7 @@ const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <>
+    <div className="fixed top-0 z-30 w-full shadow backdrop-blur-2xl">
       {/* Top Navbar */}
       <div className="flex h-20 w-full items-center justify-between p-2 lg:hidden">
         <button onClick={() => setIsOpen(true)}>
@@ -39,7 +39,7 @@ const MobileNav: React.FC = () => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-            className="bg-background text-foreground fixed inset-0 z-50 flex flex-col p-5"
+            className="bg-background text-foreground fixed inset-0 z-50 flex h-screen max-h-screen flex-col overflow-y-scroll p-5"
           >
             {/* Header with Close Icon */}
             <div className="mb-10 flex items-center justify-between">
@@ -98,7 +98,7 @@ const MobileNav: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 

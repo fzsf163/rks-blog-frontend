@@ -12,7 +12,7 @@ const menu = [
 ]
 export function Navbar() {
   return (
-    <div className="fixed top-0 hidden h-20 w-full items-center justify-evenly lg:flex">
+    <div className="fixed top-0 hidden h-20 w-full items-center justify-evenly shadow backdrop-blur-2xl lg:flex">
       <div className="font-sans font-extrabold">MHF</div>
       <nav className="flex items-center justify-center gap-10">
         {menu.map((m) => {
