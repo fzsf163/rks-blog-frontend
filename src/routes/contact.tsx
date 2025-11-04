@@ -7,7 +7,7 @@ export const Route = createFileRoute('/contact')({
 
 function RouteComponent() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
+    <main className="flex min-h-screen items-center justify-center p-4 sm:p-0">
       <ConctactForm></ConctactForm>
     </main>
   )
