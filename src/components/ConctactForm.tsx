@@ -8,6 +8,7 @@ import {
 import { Label } from './ui/label'
 import { Mail, Pen } from 'lucide-react'
 import { useState, type ChangeEvent } from 'react'
+import { Button } from './ui/button'
 
 export function ConctactForm() {
   const [letterLeft, setLetterLeft] = useState<number>(500)
@@ -56,6 +57,7 @@ export function ConctactForm() {
           </InputGroupAddon>
         </InputGroup>
       </div>
+      <Button type="button">Submit</Button>
     </div>
   )
 }
