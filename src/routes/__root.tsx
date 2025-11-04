@@ -15,7 +15,7 @@ interface MyRouterContext {
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   component: () => (
-    <>
+    <div className="font-body">
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <Header />
         <Outlet />
@@ -32,6 +32,6 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
           TanStackQueryDevtools,
         ]}
       />
-    </>
+    </div>
   ),
 })
