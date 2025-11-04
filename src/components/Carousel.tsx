@@ -3,12 +3,11 @@ import {
   Carousel,
   Slider,
   SliderContainer,
-  ThumbsSlider,
   SliderDotButton,
+  ThumbsSlider,
 } from '@/components2/uilayouts/carousel'
 import { type EmblaOptionsType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
-import { Button } from './ui/button'
 import DetailsBlock from './ImageBoxCrls'
 
 function CarouselBox() {
@@ -32,7 +31,7 @@ function CarouselBox() {
           dir="ltr"
           className="relative h-full"
         >
-          <SliderContainer className="h-[300px] md:h-[400px] lg:h-[600px]">
+          <SliderContainer className="h-[300px] md:h-[400px] lg:h-[700px]">
             <Slider
               className="relative h-full w-full"
               thumbnailSrc="https://images.unsplash.com/photo-1759395073808-17782f3d8d66?q=80&w=1471&auto=format&fit=crop"
