@@ -2,6 +2,7 @@ import AboutUsBox from '@/components/AboutUs'
 import CarouselBox from '@/components/Carousel'
 import Featured from '@/components/Featured'
 import Socials from '@/components/Socials'
+import SubscribeBox from '@/components/subscribe/subscribe'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -30,6 +31,10 @@ function App() {
       {/*featured*/}
       <div>
         <Featured />
+      </div>
+      {/*subs*/}
+      <div className="mb-20">
+        <SubscribeBox />
       </div>
     </main>
   )
