@@ -14,7 +14,7 @@ const menu = [
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 z-40 hidden h-20 w-full items-center justify-evenly shadow backdrop-blur-2xl lg:flex">
+    <div className="bg-background fixed top-0 z-40 hidden h-20 w-full items-center justify-evenly shadow backdrop-blur-2xl lg:flex">
       {/* Logo */}
       <div className="font-sans text-lg font-extrabold tracking-wide">MHF</div>
 

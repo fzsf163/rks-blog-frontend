@@ -2,8 +2,8 @@ import * as React from 'react'
 
 const AboutUsBox: React.FC = () => {
   return (
-    <div className="flex w-full items-center justify-center md:h-100">
-      <div className="flex h-full w-[80%] flex-col items-center justify-center gap-10 bg-neutral-100 p-2 md:flex-row">
+    <div className="bg-accent flex w-full items-center justify-center md:h-200">
+      <div className="flex h-full w-[80%] flex-col items-center justify-center gap-10 p-2 md:flex-row">
         <div className="max-w-3xl text-justify md:w-100">
           <p className="font-bold md:text-3xl">Title</p>
           <p className="font-medium md:text-xl">

@@ -56,7 +56,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="footer-text pointer-events-none text-center text-4xl select-none sm:pr-20 sm:text-right sm:font-bold md:text-7xl lg:text-8xl xl:text-9xl">
+      <p className="footer-text pointer-events-none text-center text-4xl select-none sm:mt-12 sm:pr-20 sm:text-right sm:font-bold md:text-7xl lg:text-8xl xl:text-9xl">
         Make Her Fly
       </p>
     </div>

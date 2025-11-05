@@ -2,7 +2,7 @@ import AboutUsBox from '@/components/AboutUs'
 import CarouselBox from '@/components/Carousel'
 import Featured from '@/components/Featured'
 import Socials from '@/components/Socials'
-import SubscribeBox from '@/components/subscribe/subscribe'
+import { SubscriberBox } from '@/components/subscribe'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -11,9 +11,9 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <main className="space-y-10 text-center">
+    <main className="space-y-16 pt-10 text-center">
       {/*hookline*/}
-      <div className="font-hook pt-10 text-3xl font-semibold">
+      <div className="font-hook text-3xl font-semibold">
         "Everything is Good, Daijoubu Desuu"
       </div>
       {/*caruosel*/}
@@ -33,8 +33,8 @@ function App() {
         <Featured />
       </div>
       {/*subs*/}
-      <div className="mb-20">
-        <SubscribeBox />
+      <div>
+        <SubscriberBox />
       </div>
     </main>
   )
