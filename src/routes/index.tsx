@@ -1,5 +1,6 @@
 import AboutUsBox from '@/components/AboutUs'
 import CarouselBox from '@/components/Carousel'
+import Featured from '@/components/Featured'
 import Socials from '@/components/Socials'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -25,6 +26,10 @@ function App() {
       {/*about us section*/}
       <div>
         <AboutUsBox />
+      </div>
+      {/*featured*/}
+      <div>
+        <Featured />
       </div>
     </main>
   )

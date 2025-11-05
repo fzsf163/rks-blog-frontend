@@ -8,6 +8,7 @@ import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
 import { ThemeProvider } from '@/components/theme-provider'
 import type { QueryClient } from '@tanstack/react-query'
+import Footer from '@/components/footer/footer'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -19,6 +20,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <Header />
         <Outlet />
+        <Footer></Footer>
       </ThemeProvider>
       <TanStackDevtools
         config={{

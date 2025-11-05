@@ -19,9 +19,23 @@ export function Navbar() {
           return (
             <div key={m.name} className="">
               <Link to={m.href}>
-                <li className="list-none rounded-sm p-2 capitalize transition-all duration-100 ease-in-out hover:bg-blue-100">
-                  {m.name}
-                </li>
+                {({ isActive }) => {
+                  return (
+                    <span
+                      className={isActive ? 'bg-foreground rounded-sm p-2' : ''}
+                    >
+                      <span
+                        className={
+                          isActive
+                            ? 'mix-blend-differencee text-background capitalize'
+                            : 'capitalize'
+                        }
+                      >
+                        {m.name}
+                      </span>{' '}
+                    </span>
+                  )
+                }}
               </Link>
             </div>
           )

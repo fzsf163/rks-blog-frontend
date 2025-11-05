@@ -2,11 +2,11 @@ import * as React from 'react'
 
 const AboutUsBox: React.FC = () => {
   return (
-    <div className="mb-10 flex h-100 w-full items-center justify-center">
-      <div className="flex h-full w-[80%] items-center justify-center gap-10 bg-neutral-100">
-        <div className="w-100 max-w-3xl text-justify">
-          <p className="text-3xl font-bold">Title</p>
-          <p className="text-xl font-medium">
+    <div className="flex w-full items-center justify-center md:h-100">
+      <div className="flex h-full w-[80%] flex-col items-center justify-center gap-10 bg-neutral-100 p-2 md:flex-row">
+        <div className="max-w-3xl text-justify md:w-100">
+          <p className="font-bold md:text-3xl">Title</p>
+          <p className="font-medium md:text-xl">
             In this post, I want to share how we can create custom cursor and
             button animations in a React application using Framer Motion. Framer
             Motion is a powerful animation library for React, perfect for

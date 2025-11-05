@@ -67,12 +67,16 @@ const MobileNav: React.FC = () => {
                     {({ isActive }) => {
                       return (
                         <span
-                          className={isActive ? 'rounded-sm bg-black p-2' : ''}
+                          className={
+                            isActive
+                              ? 'bg-foreground rounded-sm p-2 capitalize'
+                              : 'capitalize'
+                          }
                         >
                           <span
                             className={
                               isActive
-                                ? 'mix-blend-differencee text-blue-200'
+                                ? 'mix-blend-differencee text-background'
                                 : ''
                             }
                           >
