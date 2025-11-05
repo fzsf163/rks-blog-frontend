@@ -18,7 +18,7 @@ const DetailsBlock: React.FC<DetailsBlockProps> = ({
   href,
 }) => {
   return (
-    <div className="relative h-96 w-full overflow-hidden rounded-lg md:h-[700px]">
+    <div className="relative h-96 w-full overflow-hidden md:h-[700px]">
       {/* Background image */}
       <img
         src={imageUrl}
