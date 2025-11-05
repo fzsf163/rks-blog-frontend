@@ -1,5 +1,3 @@
-
-
 :root {
   --footer-bg-Keppel: #34a0a3;
 }
@@ -13,15 +11,18 @@
 .footer-bg {
   background-color: var(--footer-bg-Keppel);
 }
+.dark {
+  --footer-bg-Keppel: oklch(0.25 0 0);
+}
 
 .k2d-bold {
-  font-family: "K2D", sans-serif;
+  font-family: 'K2D', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-@media screen and (max-width:425px) {
-    .footer-text{
-        -webkit-text-stroke: 1px #f8f8f8;
-    }
+@media screen and (max-width: 425px) {
+  .footer-text {
+    -webkit-text-stroke: 1px #f8f8f8;
+  }
 }

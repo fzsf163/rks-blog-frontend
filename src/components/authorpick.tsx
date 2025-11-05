@@ -18,11 +18,11 @@ const Authorspick: React.FC = () => {
             alt="Author's pick main"
           />
           <div className="space-y-2">
-            <p className="text-sm font-medium text-gray-600 uppercase">
+            <p className="text-sm font-medium text-gray-600/50 uppercase dark:text-gray-300/50">
               Life-Style
             </p>
             <p className="text-xl font-semibold">How to lead a life of peace</p>
-            <p className="line-clamp-2 text-sm font-light text-gray-700">
+            <p className="line-clamp-2 text-sm font-light text-gray-700 dark:text-gray-300">
               Life begins as such and that Life begins as such and that Life
               begins as such and that Life begins as such and that Life begins
               as such and that...
@@ -43,13 +43,13 @@ const Authorspick: React.FC = () => {
                 alt={`Author's pick ${item}`}
               />
               <div className="flex-1 space-y-1">
-                <p className="text-sm font-medium text-gray-600 uppercase">
+                <p className="text-sm font-medium text-gray-600/50 uppercase dark:text-gray-300/50">
                   Life-Style
                 </p>
                 <p className="text-lg font-semibold">
                   How to lead a life of peace
                 </p>
-                <p className="line-clamp-2 text-sm font-light text-gray-700">
+                <p className="line-clamp-2 text-sm font-light text-gray-700 dark:text-gray-300">
                   Life begins as such and that Life begins as such and that Life
                   begins as such and that Life begins as such and that...
                 </p>
