@@ -17,7 +17,7 @@ export function SubscriberBox() {
     console.log('submitted')
   }
   return (
-    <div className="bg-accent flex h-180 flex-col items-center justify-center px-4">
+    <div className="bg-accent flex h-120 flex-col items-center justify-center px-4">
       <h2 className="mb-10 text-center text-xl text-black sm:mb-20 sm:text-5xl dark:text-white">
         Be The First To Know
       </h2>

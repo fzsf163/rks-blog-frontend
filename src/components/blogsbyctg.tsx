@@ -1,3 +1,7 @@
+import { MoveRightIcon } from 'lucide-react'
+import { Button } from './ui/button'
+import { Link } from '@tanstack/react-router'
+
 const BlogsByCategory = () => {
   return (
     <div className="w-fit space-y-10">
@@ -31,6 +35,13 @@ const BlogsByCategory = () => {
               </div>
             ))}
           </div>
+
+          {/*view btn*/}
+          <Link to={'/blogs'}>
+            <Button className="mt-2 ml-4 sm:float-end sm:mr-4 sm:ml-0">
+              View all <MoveRightIcon></MoveRightIcon>
+            </Button>
+          </Link>
         </div>
       ))}
     </div>

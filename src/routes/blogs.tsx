@@ -10,7 +10,7 @@ export const Route = createFileRoute('/blogs')({
 
 function RouteComponent() {
   return (
-    <div className="mx-auto space-y-10">
+    <div className="mx-auto mb-20 space-y-10">
       <div>
         {' '}
         <CarouselBox />
