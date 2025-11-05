@@ -17,7 +17,7 @@ function CarouselBox() {
   }
   return (
     <>
-      <div className="w-[80%]">
+      <div className="w-full">
         <Carousel
           options={OPTIONS}
           plugins={[
