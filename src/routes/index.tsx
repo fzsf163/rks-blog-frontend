@@ -18,7 +18,9 @@ function App() {
       </div>
       {/*caruosel*/}
       <div className="flex items-center justify-center">
-        <CarouselBox />
+        <div className="w-[80%] rounded-sm">
+          <CarouselBox />
+        </div>
       </div>
       {/*socials*/}
       <div>
