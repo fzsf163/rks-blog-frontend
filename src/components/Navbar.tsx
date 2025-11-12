@@ -1,8 +1,9 @@
 import { Link } from '@tanstack/react-router'
 import { motion } from 'motion/react'
+import SearchDialogue from './searchDialouge'
+import SelectBox from './selectbox'
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { Button } from './ui/button'
-import SelectBox from './selectbox'
 
 const menu = [
   { name: 'home', href: '/' },
@@ -65,6 +66,7 @@ export function Navbar() {
           ]}
         />
         <AnimatedThemeToggler duration={600} />
+        <SearchDialogue></SearchDialogue>
       </div>
 
       {/* Contact Button */}
