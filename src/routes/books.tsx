@@ -10,13 +10,13 @@ export const Route = createFileRoute('/books')({
 function RouteComponent() {
   return (
     <div className="mx-auto w-[80%] space-y-10 py-16">
-      <div className="w-fit space-y-10">
+      <div className="w-full space-y-10">
         {[1, 2, 3].map((item) => (
-          <div key={item} className="w-fit sm:p-10 2xl:p-0">
+          <div key={item} className="w-full sm:p-10 2xl:p-0">
             <p className="mb-4 w-fit text-xl font-semibold">Category: {item}</p>
 
-            <div className="flex w-full flex-col items-center justify-center gap-6 p-4 sm:flex-row">
-              {[4, 5, 6].map((i) => (
+            <div className="grid min-h-fit gap-4 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+              {[4, 5, 6, 7].map((i) => (
                 <div
                   key={i}
                   className="bg-accent w-full max-w-[500px] rounded-sm p-5 shadow"
