@@ -1,4 +1,5 @@
 import { SubscriberBox } from '@/components/subscribe'
+import { Button } from '@/components/ui/button'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/courses')({
@@ -36,6 +37,7 @@ function RouteComponent() {
                       begins as such and that Life begins as such and that...
                     </p>
                   </div>
+                  <Button className="mt-2 rounded-full">Learn More</Button>
                 </div>
               ))}
             </div>
