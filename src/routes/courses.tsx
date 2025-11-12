@@ -1,3 +1,4 @@
+import PaginationBox from '@/components/shadcn-studio/pagination/pagination-07'
 import { SubscriberBox } from '@/components/subscribe'
 import { Button } from '@/components/ui/button'
 import { createFileRoute } from '@tanstack/react-router'
@@ -44,6 +45,8 @@ function RouteComponent() {
           </div>
         ))}
       </div>
+
+      <PaginationBox></PaginationBox>
 
       {/*subs box*/}
       <div className="">
