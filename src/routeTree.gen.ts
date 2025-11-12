@@ -16,6 +16,7 @@ import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
+import { Route as BlogsCtgRouteImport } from './routes/blogs_.$ctg'
 import { Route as BlogIdRouteImport } from './routes/blog.$id'
 
 const CoursesRoute = CoursesRouteImport.update({
@@ -53,6 +54,11 @@ const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
   path: '/demo/tanstack-query',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogsCtgRoute = BlogsCtgRouteImport.update({
+  id: '/blogs_/$ctg',
+  path: '/blogs/$ctg',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIdRoute = BlogIdRouteImport.update({
   id: '/blog/$id',
   path: '/blog/$id',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/blog/$id': typeof BlogIdRoute
+  '/blogs/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/blog/$id': typeof BlogIdRoute
+  '/blogs/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/blog/$id': typeof BlogIdRoute
+  '/blogs_/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/blog/$id'
+    | '/blogs/$ctg'
     | '/demo/tanstack-query'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/blog/$id'
+    | '/blogs/$ctg'
     | '/demo/tanstack-query'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/blog/$id'
+    | '/blogs_/$ctg'
     | '/demo/tanstack-query'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   BlogIdRoute: typeof BlogIdRoute
+  BlogsCtgRoute: typeof BlogsCtgRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoTanstackQueryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blogs_/$ctg': {
+      id: '/blogs_/$ctg'
+      path: '/blogs/$ctg'
+      fullPath: '/blogs/$ctg'
+      preLoaderRoute: typeof BlogsCtgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/$id': {
       id: '/blog/$id'
       path: '/blog/$id'
@@ -203,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   BlogIdRoute: BlogIdRoute,
+  BlogsCtgRoute: BlogsCtgRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
 }
 export const routeTree = rootRouteImport

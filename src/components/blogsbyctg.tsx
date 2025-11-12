@@ -37,7 +37,7 @@ const BlogsByCategory = () => {
           </div>
 
           {/*view btn*/}
-          <Link to={'/blogs'}>
+          <Link to={`/blogs/$ctg`} params={{ ctg: item.toString() }}>
             <Button className="mt-2 ml-4 sm:float-end sm:mr-4 sm:ml-0">
               View all <MoveRightIcon></MoveRightIcon>
             </Button>
