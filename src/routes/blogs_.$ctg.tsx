@@ -2,7 +2,7 @@ import BreadCrubmsBox from '@/components/shadcn-studio/breadcrumb/breadcrumb-02'
 import PaginationBox from '@/components/shadcn-studio/pagination/pagination-07'
 import { SubscriberBox } from '@/components/subscribe'
 import { Button } from '@/components/ui/button'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/blogs_/$ctg')({
   component: RouteComponent,
@@ -38,7 +38,12 @@ function RouteComponent() {
                   and that Life begins as such and that...
                 </p>
               </div>
-              <Button className="mt-2 rounded-full">Learn More</Button>
+              <Link
+                to="/blogs/$ctg/$id"
+                params={{ id: i.toString(), ctg: ctg }}
+              >
+                <Button className="mt-2 rounded-full">Learn More</Button>
+              </Link>
             </div>
           ))}
         </div>

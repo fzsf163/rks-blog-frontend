@@ -17,7 +17,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as BlogsCtgRouteImport } from './routes/blogs_.$ctg'
-import { Route as BlogIdRouteImport } from './routes/blog.$id'
+import { Route as BlogsCtgIdRouteImport } from './routes/blogs_.$ctg_.$id'
 
 const CoursesRoute = CoursesRouteImport.update({
   id: '/courses',
@@ -59,9 +59,9 @@ const BlogsCtgRoute = BlogsCtgRouteImport.update({
   path: '/blogs/$ctg',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIdRoute = BlogIdRouteImport.update({
-  id: '/blog/$id',
-  path: '/blog/$id',
+const BlogsCtgIdRoute = BlogsCtgIdRouteImport.update({
+  id: '/blogs_/$ctg_/$id',
+  path: '/blogs/$ctg/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -72,9 +72,9 @@ export interface FileRoutesByFullPath {
   '/books': typeof BooksRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
-  '/blog/$id': typeof BlogIdRoute
   '/blogs/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/blogs/$ctg/$id': typeof BlogsCtgIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -83,9 +83,9 @@ export interface FileRoutesByTo {
   '/books': typeof BooksRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
-  '/blog/$id': typeof BlogIdRoute
   '/blogs/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/blogs/$ctg/$id': typeof BlogsCtgIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -95,9 +95,9 @@ export interface FileRoutesById {
   '/books': typeof BooksRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
-  '/blog/$id': typeof BlogIdRoute
   '/blogs_/$ctg': typeof BlogsCtgRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/blogs_/$ctg_/$id': typeof BlogsCtgIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -108,9 +108,9 @@ export interface FileRouteTypes {
     | '/books'
     | '/contact'
     | '/courses'
-    | '/blog/$id'
     | '/blogs/$ctg'
     | '/demo/tanstack-query'
+    | '/blogs/$ctg/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -119,9 +119,9 @@ export interface FileRouteTypes {
     | '/books'
     | '/contact'
     | '/courses'
-    | '/blog/$id'
     | '/blogs/$ctg'
     | '/demo/tanstack-query'
+    | '/blogs/$ctg/$id'
   id:
     | '__root__'
     | '/'
@@ -130,9 +130,9 @@ export interface FileRouteTypes {
     | '/books'
     | '/contact'
     | '/courses'
-    | '/blog/$id'
     | '/blogs_/$ctg'
     | '/demo/tanstack-query'
+    | '/blogs_/$ctg_/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -142,9 +142,9 @@ export interface RootRouteChildren {
   BooksRoute: typeof BooksRoute
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
-  BlogIdRoute: typeof BlogIdRoute
   BlogsCtgRoute: typeof BlogsCtgRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
+  BlogsCtgIdRoute: typeof BlogsCtgIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -205,11 +205,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogsCtgRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/$id': {
-      id: '/blog/$id'
-      path: '/blog/$id'
-      fullPath: '/blog/$id'
-      preLoaderRoute: typeof BlogIdRouteImport
+    '/blogs_/$ctg_/$id': {
+      id: '/blogs_/$ctg_/$id'
+      path: '/blogs/$ctg/$id'
+      fullPath: '/blogs/$ctg/$id'
+      preLoaderRoute: typeof BlogsCtgIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -222,9 +222,9 @@ const rootRouteChildren: RootRouteChildren = {
   BooksRoute: BooksRoute,
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
-  BlogIdRoute: BlogIdRoute,
   BlogsCtgRoute: BlogsCtgRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
+  BlogsCtgIdRoute: BlogsCtgIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
